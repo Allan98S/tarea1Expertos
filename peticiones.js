@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    $("#form_estilo").submit(function () {
+        var datosFormulario = $(this).serialize(); // recorre todos los campos del form y los almacena
+        
+        $.getJSON("adivinarEstilo.php", datosFormulario, procesarDatosAdivinarEstilo);
+        return false;
+        
+        });
+        
+        function procesarDatosAdivinarEstilo(datos_devueltos) { // datosDeuveltos es el json que viene de PHP
+        $("#adivinarEstiloFinal").html("<p>"+datos_devueltos.Estilo+"</p>");
+        
+        }
+
+
+    
     $("#form_recinto").submit(function () {
     var datosFormulario = $(this).serialize(); // recorre todos los campos del form y los almacena
     

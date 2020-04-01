@@ -52,12 +52,12 @@
 </div>
 
 <br>
-<form name="estilo">
+<form  id="form_estilo" action="adivinarEstilo.php" method="get">
   <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
     <tbody>
       <tr>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c1">
+        <select id="c1" name="c1">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -66,7 +66,7 @@
 discerniendo<br>
         </td>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c2">
+        <select id="c2" name="c2"> 
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -75,7 +75,7 @@ discerniendo<br>
 ensayando<br>
         </td>
         <td style="vertical-align: top;">
-        <select name="c3">
+        <select id="c3" name="c3">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -83,7 +83,7 @@ ensayando<br>
         </select>
 involucrándome</td>
         <td style="vertical-align: top;">
-        <select name="c4">
+        <select id="c4" name="c4">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -93,7 +93,7 @@ practicando</td>
       </tr>
       <tr>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c5">
+        <select id="c5" name="c5">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -101,7 +101,7 @@ practicando</td>
         </select>
 receptivamente </td>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c6">
+        <select id="c6" name="c6">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -109,7 +109,7 @@ receptivamente </td>
         </select>
 relacionando </td>
         <td style="vertical-align: top;">
-        <select name="c7">
+        <select id="c7" name="c7">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -117,7 +117,7 @@ relacionando </td>
         </select>
 analíticamente </td>
         <td style="vertical-align: top;">
-        <select name="c8">
+        <select id="c8" name="c8">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -127,7 +127,7 @@ imparcialmente </td>
       </tr>
       <tr>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c9">
+        <select id="c9" name="c9">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -135,7 +135,7 @@ imparcialmente </td>
         </select>
 sintiendo </td>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c10">
+        <select id="c10" name="c10">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -143,7 +143,7 @@ sintiendo </td>
         </select>
 observando </td>
         <td style="vertical-align: top;">
-        <select name="c11">
+        <select id="c11"  name="c11">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -151,7 +151,7 @@ observando </td>
         </select>
 pensando </td>
         <td style="vertical-align: top;">
-        <select name="c12">
+        <select id="c12" name="c12">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -161,7 +161,7 @@ haciendo </td>
       </tr>
       <tr>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c13">
+        <select id="c13" name="c13">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -169,7 +169,7 @@ haciendo </td>
         </select>
 aceptando </td>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c14">
+        <select id="c14" name="c14">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -177,7 +177,7 @@ aceptando </td>
         </select>
 arriesgando </td>
         <td style="vertical-align: top;">
-        <select name="c15">
+        <select id="c15" name="c15">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -185,7 +185,7 @@ arriesgando </td>
         </select>
 evaluando </td>
         <td style="vertical-align: top;">
-        <select name="c16">
+        <select id="c16" name="c16">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -195,7 +195,7 @@ con cautela </td>
       </tr>
       <tr>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c17">
+        <select id="c17" name="c17">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -203,7 +203,7 @@ con cautela </td>
         </select>
 intuitivamente </td>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c18">
+        <select id="c18" name="c18">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -211,7 +211,7 @@ intuitivamente </td>
         </select>
 productivamente </td>
         <td style="vertical-align: top;">
-        <select name="c19">
+        <select id="c19" name="c19">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -219,7 +219,7 @@ productivamente </td>
         </select>
 lógicamente </td>
         <td style="vertical-align: top;">
-        <select name="c20">
+        <select id="c20" name="c20">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -229,7 +229,7 @@ cuestionando </td>
       </tr>
       <tr>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c21">
+        <select id="c21" name="c21">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -237,7 +237,7 @@ cuestionando </td>
         </select>
 abstracto </td>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c22">
+        <select id="c22" name="c22">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -245,7 +245,7 @@ abstracto </td>
         </select>
 observando </td>
         <td style="vertical-align: top;">
-        <select name="c23">
+        <select id="c23" name="c23">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -253,7 +253,7 @@ observando </td>
         </select>
 concreto </td>
         <td style="vertical-align: top;">
-        <select name="c24">
+        <select id="c24" name="c24">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -263,7 +263,7 @@ activo </td>
       </tr>
       <tr>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c25">
+        <select id="c25" name="c25">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -271,7 +271,7 @@ activo </td>
         </select>
 orientado al presente </td>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c26">
+        <select id="c26" name="c26">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -279,7 +279,7 @@ orientado al presente </td>
         </select>
 reflexivamente </td>
         <td style="vertical-align: top;">
-        <select name="c27">
+        <select id="c27" name="c27">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -287,7 +287,7 @@ reflexivamente </td>
         </select>
 orientado hacia el futuro </td>
         <td style="vertical-align: top;">
-        <select name="c28">
+        <select id="c28" name="c28">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -297,7 +297,7 @@ pragmático </td>
       </tr>
       <tr>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c29">
+        <select id="c29" name="c29">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -305,7 +305,7 @@ pragmático </td>
         </select>
 aprendo más de la experiencia </td>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c30">
+        <select id="c30" name="c30">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -313,7 +313,7 @@ aprendo más de la experiencia </td>
         </select>
 aprendo más de la observación </td>
         <td style="vertical-align: top;">
-        <select name="c31">
+        <select id="c31" name="c31">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -321,7 +321,7 @@ aprendo más de la observación </td>
         </select>
 aprendo más de la conceptualización </td>
         <td style="vertical-align: top;">
-        <select name="c32">
+        <select id="c32" name="c32">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -331,7 +331,7 @@ aprendo más de la experimentación </td>
       </tr>
       <tr>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c33">
+        <select id="c33" name="c33">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -339,7 +339,7 @@ aprendo más de la experimentación </td>
         </select>
 emotivo </td>
         <td style="vertical-align: top; width: 25%;">
-        <select name="c34">
+        <select id="c34"name="c34">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -347,7 +347,7 @@ emotivo </td>
         </select>
 reservado </td>
         <td style="vertical-align: top;">
-        <select name="c35">
+        <select id="c35" name="c35">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -355,7 +355,7 @@ reservado </td>
         </select>
 racional </td>
         <td style="vertical-align: top;">
-        <select name="c36">
+        <select id="c36" name="c36">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -367,10 +367,10 @@ abierto </td>
     </tbody>
   </table>
   <br>
-  <input type="submit" value="Calcular "  id='boton_1'/>
+  <input type="submit" value="Calcular " name="boton" id='boton'/>
 
 </form>
-Su estilo:  <input maxlength="12" size="12" name="estiloFinal">
+Su estilo:<div id="adivinarEstiloFinal"></div>
 </div>
 </section>
 
