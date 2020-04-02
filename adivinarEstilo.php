@@ -45,11 +45,11 @@ $ea=$c4+$c12+$c24+$c28+$c32+$c36;
 
 $arrayA=array($ec,$or,$ca,$ea);
 
-$datos=new ManejoDatos();
+
 $logica=new Logica();
 $array = new stdClass();
  
-$array->Estilo =$logica->calcLearningStyles($arrayA);
+$array->Estilo =$logica->calcularEstiloAprendizaje($arrayA);
 $json = json_encode($array);
 echo $json;
 

@@ -44,14 +44,14 @@ $(document).ready(function () {
     $("#form_estilo_aprendizaje").submit(function () {
     var datosFormulario = $(this).serialize(); // recorre todos los campos del form y los almacena
     
-    $.getJSON("sexoEstudiante.php", datosFormulario, procesarDatosSexo);
+    $.getJSON("estiloAprendizaje.php", datosFormulario, procesarDatosEstiloAprendizaje);
     
     return false;
     
     });
     
     function procesarDatosEstiloAprendizaje(datos_devueltos) { // datosDeuveltos es el json que viene de PHP
-    $("#estiloFinal").html("<p>"+datos_devueltos.EstiloAprendizaje+"</p>");
+    $("#estiloFinal").html("<p>"+datos_devueltos.Estilo+"</p>");
     
     }
     $("#form_profesor").submit(function () {

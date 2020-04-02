@@ -405,7 +405,7 @@ Su estilo:<div id="adivinarEstiloFinal"></div>
            </td></tr>
            <tr>
              <td>Promedio ponderado: </td>
-             <td><input type="number"  required name="promedio" id="promedio"></td>
+             <td><input type="number"  step="0.01" min="0" max="10"  required name="promedio" id="promedio"></td>
            </tr>
            <tr>
            <tr>
@@ -454,7 +454,7 @@ Su recinto:<div id="recintoFinal"></div>
            </td></tr>
            <tr>
              <td>Promedio ponderado: </td>
-             <td><input type="number" required name="promedio" id="promedio"></td>
+             <td><input type="number"  step="0.01" min="0" max="10" required name="promedio" id="promedio"></td>
            </tr>
            <tr>
            <tr>
@@ -499,7 +499,7 @@ Su sexo:<div id="sexoFinal"></div>
              </td></tr>
            <tr>
              <td>Promedio ponderado: </td>
-             <td><input type="number" required name="promedio" id="promedio"></td>
+             <td><input type="number" step="0.01" min="0" max="10" required name="promedio" id="promedio"></td>
            </tr>
            <tr>
            <tr>
@@ -510,7 +510,7 @@ Su sexo:<div id="sexoFinal"></div>
                     </select>
              </td></tr>
          
-           <tr><td colspan="2"> <input type="submit" name="enviando" value="Adivinar Recinto">
+           <tr><td colspan="2"> <input type="submit" name="enviando" value="Adivinar Estilo Aprendizaje">
         </td></tr></table>
         </form>
 
@@ -602,7 +602,7 @@ Su estilo de aprendizaje es: <div id="estiloFinal"></div>
                         <option value="N">Ninguna</option>
                         <option value="S">A veces</option>
                         <option value="O">A menudo</option>
-                    </select>
+                    </select> 
                     Habilidades utilizando tecnolog&iacute;a basada en la web para la ense&ncaron;anza</td>
                 <td style="vertical-align: top;">
                     <select id="habilidadesSitioWeb"name="habilidadesSitioWeb">
@@ -646,7 +646,7 @@ Tipo de profesor:  <div id="profesorFinal"></div>
             <tr>
                 <td style="vertical-align: top; width: 25%;">
                     Confiabilidad
-                    <select id="confiabilidad" name="confiablidad">
+                    <select id="confiabilidad" name="confiabilidad">
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -655,7 +655,7 @@ Tipo de profesor:  <div id="profesorFinal"></div>
                 </td>
                 <td style="vertical-align: top; width: 25%;">
                 N&uacute;mero de enlaces
-                <input id="form_seven_links" value="0" type="number"  required/>
+                <input id="numeroEnlaces"  name="numeroEnlaces" value="0" type="number"  required/>
                 </td>
                 <td style="vertical-align: top;">
                 Capacidad
@@ -668,7 +668,7 @@ Tipo de profesor:  <div id="profesorFinal"></div>
                   
                 <td style="vertical-align: top;">
                 Costo
-                    <select id="costo">
+                    <select id="costo" name="costo">
                         <option value="Low">Baja</option>
                         <option value="Medium">Media</option>
                         <option value="High">Alta</option>
