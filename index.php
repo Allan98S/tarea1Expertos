@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Documento sin título</title>
+<title>Expertos</title>
 <link rel="stylesheet" href="scrolling-nav.css">
 <link rel="stylesheet" href="bootstrap.min.css">
 <script src="jquery.min.js"></script>
@@ -17,7 +17,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Tarea Expertos</a>
+      <a class="navbar-brand" href="#">Tarea Expertos Allan Solano B66946</a>
     </div>
     <div class="collapse navbar-collapse " id="navbarResponsive">
     <ul class="nav navbar-nav ml-auto">
