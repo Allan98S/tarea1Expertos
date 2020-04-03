@@ -1,4 +1,8 @@
 <?php
+   /**
+     *  Se obtienen los datos del formulario y se envian a la clase lógica para procesar el algoritmo requerido
+     * y luego se envía el resultado devuelto por dicho algoritmo  en un archivo json para procesarlo en el HTML5
+     */
 require "logica.php";
 $edad=isset($_GET['edad']) ? $_GET['edad'] : $_POST['edad'];
 $genero=isset($_GET['genero']) ? $_GET['genero'] : $_POST['genero'];

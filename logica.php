@@ -6,7 +6,9 @@ class Logica    {
     function __construct() {
  
  }
-
+     /*
+     * Funcion que ejecuta la formula de distancia euclidiana a partir de 2 vectores del mismo tamaño
+     */
     function distanciaEuclidiana($arrayA, $arrayB) {
         if (count($arrayA) !== count($arrayB)) {
             return NULL;
@@ -19,7 +21,11 @@ class Logica    {
         }
         return 1/(1+sqrt((float) $distancia));
     }
-
+    /*
+     * Funcion que calcula el estilo de aprendizaje del formulario 1, se compara el vector del formulario
+     * con el de la consulta SQL de la tabla recintoestilo, y se ejecuta distancia euclidiana para obtener el 
+     * punto mas cercano
+     */
     function calcularEstiloAprendizaje($array_A) {
         $datos=new ManejoDatos();
         $array = new stdClass();
@@ -34,6 +40,11 @@ class Logica    {
         }
         return $this->temporal;
         }
+    /*
+     * Funcion que calcula el recinto de origen del estudiante del formulario 2, se compara el vector del formulario
+     * con el de la consulta SQL de la tabla estilosexopromediorecinto, y se ejecuta distancia euclidiana para 
+     * obtener el punto mas cercano
+     */
     function adivinarRecinto($array_A){
         $datos=new ManejoDatos();
         $arrayBD =$datos->getEstiloSexoPromedioRecinto();
@@ -72,7 +83,11 @@ class Logica    {
         }
         return $this->temporal;
     }
-
+     /*
+     * Funcion que calcula el sexo del estudiante del formulario 3, se compara el vector del formulario
+     * con el de la consulta SQL de la tabla estilosexopromediorecinto, y se ejecuta distancia euclidiana para 
+     * obtener el punto mas cercano
+     */
     function adivinarSexo($array_A){
         $datos=new ManejoDatos();
         $arrayBD =$datos->getEstiloSexoPromedioRecinto();
@@ -118,6 +133,11 @@ class Logica    {
             return $this->temporal;
             }
     }
+     /*
+     * Funcion que calcula el estilo de aprendizaje del formulario 4, se compara el vector del formulario
+     * con el de la consulta SQL de la tabla estilosexopromediorecinto, y se ejecuta distancia euclidiana para 
+     * obtener el punto mas cercano
+     */
     function adivinarEstilo($array_A){
         $datos=new ManejoDatos();
         $arrayBD =$datos->getEstiloSexoPromedioRecinto();
@@ -137,7 +157,10 @@ class Logica    {
         return $this->temporal;
         
     }
-
+    /*
+     * Funcion  que convierte los datos del formulario HTML para tipo de profesor con el fin de que sea 
+     * compatible con distancia euclidiana donde solo se permiten números enteros
+     */
     function transformarDatosProfesor($array_A){
        
        if($array_A[1]=='M'){
@@ -197,7 +220,10 @@ class Logica    {
   return  array($array_A[0],$genero,$autoEvaluacion,$array_A[3],$areaConocimiento,$habilidadComputadora,
   $habilidadTeconlogias,$habilidadSitioWeb);
 }
-
+  /*
+     * Funcion  que convierte los datos del formulario HTML para clasificacion de red con el fin de que sea 
+     * compatible con distancia euclidiana donde solo se permiten números enteros
+     */
 function transformarDatosRed($array_A){
        
     if($array_A[0]=='2'){
@@ -232,7 +258,11 @@ function transformarDatosRed($array_A){
  }
 return  array($confiabilidad,$capacidad,$costo,$array_A[3]);
 }
-
+    /*
+     * Funcion que calcula el tipo de profesor del formulario 5, se compara el vector del formulario
+     * con el de la consulta SQL de la tabla profesor, y se ejecuta distancia euclidiana para 
+     * obtener el punto mas cercano
+     */
     function adivinarTipoProfesor($array_A){
     $arrayA = $this->transformarDatosProfesor($array_A);
     $datos=new ManejoDatos();
@@ -251,7 +281,11 @@ return  array($confiabilidad,$capacidad,$costo,$array_A[3]);
     return $this->temporal;
     
     }
-
+    /*
+     * Funcion que calcula la clasificacion de red del formulario 6, se compara el vector del formulario
+     * con el de la consulta SQL de la tabla redes, y se ejecuta distancia euclidiana para 
+     * obtener el punto mas cercano
+     */
     public function adivinarClasificacionRed($array_A){
     $arrayA = $this->transformarDatosRed($array_A);
     $datos=new ManejoDatos();

@@ -1,5 +1,8 @@
 <?php
-
+	/**
+     * En este archivo se crea la conexión a la base de datos MySql, con tres opciones diferentes de servidor
+	 * uno local y dos públicos
+     */
 
 class Conexion{
 	

@@ -1,3 +1,11 @@
+/** 
+ * @description Responden a cada peticion de los distintos formulario, enviando los datos del mismo en un archivo
+ * json a la archivo PHP correspondiente, donde se incluye un metodo para cada petición el cual procesará los datos
+ * devueltos json de cada archivo PHP con la ayuda de Jquery y Ajax
+ * @param null  
+ * @return null  
+ */
+
 $(document).ready(function () {
     $("#form_estilo").submit(function () {
         var datosFormulario = $(this).serialize(); // recorre todos los campos del form y los almacena

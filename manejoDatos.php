@@ -1,4 +1,5 @@
 <?php
+
 require("conexion.php");
 
 class ManejoDatos extends Conexion{
@@ -8,7 +9,10 @@ class ManejoDatos extends Conexion{
 		parent::__construct(); //ejecuta el constructor de la clase padre
 		
 	}
-	
+	   /**
+     * @return array resultado
+     * funcion para obtener el tipo de aprendizaje de la BD
+     */
 public function getEstiloSexoPromedioRecinto(){
    $sql="Select * from estilosexopromediorecinto";
    $sentencia=$this->conexion_db->prepare($sql);
@@ -18,6 +22,10 @@ public function getEstiloSexoPromedioRecinto(){
    return $resultado;
    $this->conexion_db=null;
 }
+ /**
+     * @return array resultado
+     * funcion para obtener los profesores de la BD
+     */
 public function getProfesores(){
     $sql="Select * from profesores";
     $sentencia=$this->conexion_db->prepare($sql);
@@ -27,6 +35,10 @@ public function getProfesores(){
     return $resultado;
     $this->conexion_db=null;
 }
+/**
+     * @return array resultado
+     * funcion para obtener las redes de la BD
+     */
 public function getRedes(){
     $sql="Select * from redes";
     $sentencia=$this->conexion_db->prepare($sql);
@@ -36,6 +48,10 @@ public function getRedes(){
     return $resultado;
     $this->conexion_db=null;
 }
+/**
+     * @return array resultado
+     * funcion para obtener el recinto con el estilo de aprendizaje de la BD
+     */
 public function getRecintosEstilo(){
     $sql="Select * from recintoestilo";
     $sentencia=$this->conexion_db->prepare($sql);
