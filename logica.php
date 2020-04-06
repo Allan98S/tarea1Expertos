@@ -3,9 +3,10 @@ require "manejoDatos.php";
 class Logica    {
     public $distancia;
     public $temporal;
-    function __construct() {
- 
+ function __construct() {
+    $this->distancia=1000;
  }
+
      /*
      * Funcion que ejecuta la formula de distancia euclidiana a partir de 2 vectores del mismo tamaño
      */
@@ -13,13 +14,15 @@ class Logica    {
         if (count($arrayA) !== count($arrayB)) {
             return NULL;
         }
-        $distancia = 0;
         $length = count($arrayA);
-
+        $distAcumulada=0;
         for ($i = 0; $i < $length; $i++) {
-            $distancia += pow(($arrayA[$i] - $arrayB[$i]),2);
+            $distAcumulada += pow(($arrayA[$i] - $arrayB[$i]),2);   
+           
         }
-        return 1/(1+sqrt((float) $distancia));
+        $distAcumulada=sqrt($distAcumulada);
+
+        return $distAcumulada;
     }
     /*
      * Funcion que calcula el estilo de aprendizaje del formulario 1, se compara el vector del formulario
@@ -33,7 +36,7 @@ class Logica    {
         foreach ($array_estilos as $elemento) {
             $arrayB = array($elemento['CA'], $elemento['EC'], $elemento['EA'], $elemento['OR']);
             $temporal = $this->distanciaEuclidiana($array_A, $arrayB);
-            if ($temporal > $this->distancia) {
+            if ($temporal < $this->distancia) {
                 $this->distancia = $temporal;
                 $this->temporal = $elemento['Estilo'];
             }
@@ -76,7 +79,7 @@ class Logica    {
             }
          $arrayB = array($estiloBD, $elemento['Promedio'], $elemento['Sexo'] == "M" ? 1 : 2);
          $temporal = $this->distanciaEuclidiana($arrayA, $arrayB);
-          if ($temporal > $this->distancia) {
+          if ($temporal < $this->distancia) {
               $this->distancia = $temporal;
               $this->temporal = $elemento['Recinto'];
             }
@@ -119,7 +122,7 @@ class Logica    {
             }
          $arrayB = array($estiloBD, $elemento['Promedio'], $elemento['Recinto'] == "Paraiso" ? 1 : 2);
          $temporal = $this->distanciaEuclidiana($arrayA, $arrayB);
-          if ($temporal > $this->distancia) {
+          if ($temporal < $this->distancia) {
               $this->distancia = $temporal;
               $this->temporal = $elemento['Sexo'];
             }
@@ -148,7 +151,7 @@ class Logica    {
             
          $arrayB = array($elemento['Sexo'] == "M" ? 1 : 2, $elemento['Promedio'], $elemento['Recinto'] == "Paraiso" ? 1 : 2);
          $temporal = $this->distanciaEuclidiana($arrayA, $arrayB);
-          if ($temporal > $this->distancia) {
+          if ($temporal < $this->distancia) {
               $this->distancia = $temporal;
               $this->temporal = $elemento['Estilo'];
             }
@@ -273,7 +276,7 @@ return  array($confiabilidad,$capacidad,$costo,$array_A[3]);
         $elemento['F'],$elemento['G'],$elemento['H'],$elemento['Class']);
         $arrayB=$this->transformarDatosProfesor($elemento);
         $temporal = $this->distanciaEuclidiana($arrayA, $arrayB);
-        if ($temporal > $this->distancia) {
+        if ($temporal < $this->distancia) {
             $this->distancia = $temporal;
             $this->temporal = $elemento['8'];
         }
@@ -296,7 +299,7 @@ return  array($confiabilidad,$capacidad,$costo,$array_A[3]);
         $elemento['Id'],$elemento['Number of links (L)'], $elemento['Class']);
         $arrayB=$this->transformarDatosRed($elemento);
         $temporal = $this->distanciaEuclidiana($arrayA, $arrayB);
-        if ($temporal > $this->distancia) {
+        if ($temporal < $this->distancia) {
             $this->distancia = $temporal;
             $this->temporal = $elemento['5'];
         }
